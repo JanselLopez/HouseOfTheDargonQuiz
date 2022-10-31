@@ -2,6 +2,7 @@ package com.smartestidea.houseofthedargonquiz.data
 
 import android.media.MediaPlayer
 
+
 object MusicProvider {
     private lateinit var mediaPlayer: MediaPlayer
     fun setMedia(mp: MediaPlayer){ mediaPlayer = mp }
@@ -11,5 +12,6 @@ object MusicProvider {
             mediaPlayer.start()
         }
     }
+    fun getMedia() = mediaPlayer
     fun stopMedia()= mediaPlayer.stop()
 }

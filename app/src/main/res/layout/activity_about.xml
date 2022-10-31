@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:shimmer_auto_start="true"
         app:shimmer_duration="5000"
+        android:forceDarkAllowed="false"
         app:shimmer_repeat_mode="reverse"
         tools:layout_editor_absoluteX="40dp">
 

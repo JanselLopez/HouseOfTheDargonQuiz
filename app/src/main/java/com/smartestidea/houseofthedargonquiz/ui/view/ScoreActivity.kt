@@ -6,11 +6,14 @@ import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
 import android.view.Gravity
+import android.view.View
+import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import com.smartestidea.houseofthedargonquiz.R
@@ -35,8 +38,14 @@ class ScoreActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
+        )
         val bundle = intent.extras
         puntuation = bundle!!.getInt("score")
         binding.animation.setAnimation(R.raw.confetti)
@@ -73,8 +82,6 @@ class ScoreActivity : AppCompatActivity() {
             binding.btnShare.isEnabled = false
             binding.btnShare.isVisible = false
             pushPoint()
-            MusicProvider.setMedia(MediaPlayer.create(this,R.raw.intro_hoftd))
-            MusicProvider.startMedia()
             Intent(this,QuizActivity::class.java).apply {
                 startActivity(this)
                 finish()

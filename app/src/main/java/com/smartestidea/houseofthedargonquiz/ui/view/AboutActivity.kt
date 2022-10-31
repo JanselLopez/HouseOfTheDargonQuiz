@@ -16,14 +16,14 @@ class AboutActivity : AppCompatActivity() {
         setContentView(binding.root)
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         window.setFlags(
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
         )
         binding.btnApklis.setOnClickListener {
             openLink("https://www.apklis.cu/developer/JanselLB")
         }
         binding.btnGithub.setOnClickListener {
-            //openLink()
+            openLink("https://github.com/JanselLopez/HouseOfTheDargonQuiz")
         }
     }
     private fun openLink(url:String){

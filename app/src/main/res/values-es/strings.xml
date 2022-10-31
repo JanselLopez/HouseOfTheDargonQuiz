@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="app_name">La Casa del Dragón Quiz</string>
+        <string name="play">Jugar</string>
+        <string name="ranking">Clasificación</string>
+        <string name="exit">Salir</string>
+        <string name="check">Verificar</string>
+        <string name="next">Siguiente</string>
+        <string name="quit_app">Salir</string>
+        <string name="question">Pregunta</string>
+        <string name="quiz_result">Resultado</string>
+        <string name="your_score">Tu Puntaje</string>
+        <string name="congratulations">¡Felicidades!</string>
+        <string name="name" >Nombre</string>
+        <string name="home">Inicio</string>
+        <string name="share">Compartir</string>
+        <string name="new_quiz">Intenta otra vez</string>
+        <string name="of_the_house">de la casa</string>
+        <string name="has_obtained">"ha obtenido "</string>
+        <string name="face_him">puntos, enfréntalo y consigue el trono de hierro</string>
+        <string name="already_saved">Puntuación guardada</string>
+        <string name="version">versión 0.1</string>
+        <string name="q1">¿Quién es el aliado más confiable del Príncipe Daemon?</string>
+        <string name="q2">¿Quién es la "Serpiente Marina"?</string>
+        <string name="q3">¿Quién es la "Reina que nunca fue"?</string>
+        <string name="q4">¿Quién es "Ironrod"?</string>
+        <string name="q5">¿Quién es la hija de Ser Otto Hightower?</string>
+        <string name="q6">¿Quién fue el primer rey de la dinastía Targaryen?</string>
+        <string name="q7">¿Quién construyó Dragon pit?</string>
+        <string name="q8">¿Qué dragón montó Aegon el Conquistador?</string>
+        <string name="q9">¿Quién es conocido como el "Príncipe Rogue"?</string>
+        <string name="q10">¿Cuál es el nombre del Dragón de Rhaenyra Targaryen?</string>
+        <string name="q11">¿Con quién se casó el rey Viserys después de la muerte de su primera esposa, Aemma?</string>
+        <string name="q12">¿Quién es Mano del Rey al comienzo de House of the Dragon?</string>
+        <string name="q13">¿Quién es el padre de los primeros hijos de Rhaenyra?</string>
+        <string name="q14">¿Quién fue declarado heredero del Trono de Hierro en el Gran Consejo de 102 DC?</string>
+        <string name="q15">"¿A qué casa pertenece Lord Corlys?"</string>
+        <string name="q16">En el torneo para celebrar el nacimiento del nuevo hijo del Rey, ¿quién desmontó a Daemon en la justa?</string>
+        <string name="q17">¿Quién es el hijo mayor de Corlys Velaryon?</string>
+        <string name="q18">¿Cuáles son los nombres de los dos gemelos Lannister?</string>
+        <string name="q19">Durante la batalla final en los Peldaños de Piedra, ¿qué jinete de dragón acude en ayuda de Daemon cuando se ve rodeado por soldados enemigos?</string>
+</resources>

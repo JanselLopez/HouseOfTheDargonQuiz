@@ -40,11 +40,12 @@ class QuizActivity : AppCompatActivity() {
         quizViewModel.onCreate()
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         window.setFlags(
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
         )
         binding.constraint.setBackgroundResource(BackgroundProvider.getRandomsImage())
 
+        MusicProvider.setMedia(MediaPlayer.create(this, R.raw.intro_hoftd))
         MusicProvider.startMedia()
 
         quizViewModel.time.observe(this,{ time->
@@ -85,6 +86,7 @@ class QuizActivity : AppCompatActivity() {
         })
         binding.btnLinear.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
+            MusicProvider.stopMedia()
         }
     }
 

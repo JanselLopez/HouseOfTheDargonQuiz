@@ -48,6 +48,7 @@
         android:scaleType="centerCrop"
         android:focusable="false"
         android:paddingTop="0dp"
+        app:tint="@color/throne"
         android:layout_margin="20dp"
         android:src="@drawable/ic_throne_svgrepo_com"
         app:layout_constraintEnd_toEndOf="parent"
@@ -118,7 +119,8 @@
         android:layout_margin="10dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="10dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnShare"

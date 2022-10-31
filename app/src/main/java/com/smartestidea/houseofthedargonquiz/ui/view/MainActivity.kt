@@ -9,6 +9,7 @@ import android.view.View
 import android.view.WindowManager
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
@@ -26,7 +27,7 @@ import kotlinx.coroutines.launch
 private val Context.dataStore by preferencesDataStore(name ="music")
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private val binding:ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
     private val rankingViewModel:RankingViewModel by viewModels()
@@ -34,26 +35,25 @@ class MainActivity : AppCompatActivity() {
     private val playKey = booleanPreferencesKey("play")
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         val screenSplash = installSplashScreen()
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         screenSplash.setKeepOnScreenCondition{false}
         rankingViewModel.onCreate()
+        //set system ui
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         window.setFlags(
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
         )
+        //onClicks
+        binding.btnPlay.setOnClickListener(this)
+        binding.btnRanking.setOnClickListener(this)
+        binding.btnAbout.setOnClickListener(this)
+        binding.btnMusic.setOnClickListener(this)
+
         rankingViewModel.onCreate()
-        lifecycleScope.launch {
-            readPlay()
-        }
-
-        binding.btnPlay.setOnClickListener{ showActivity(Intent(this, QuizActivity::class.java)) }
-
-        binding.btnRanking.setOnClickListener{ showActivity(Intent(this, RankingActivity::class.java)) }
-
-        binding.btnAbout.setOnClickListener { showActivity(Intent(this, AboutActivity::class.java)) }
 
         rankingViewModel.maxPoint.observe(this,{ binding.tvMax.text = it.points.toString() })
 
@@ -72,9 +72,6 @@ class MainActivity : AppCompatActivity() {
                 setPlay(it)
             }
         })
-        binding.btnMusic.setOnClickListener {
-           musicViewModel.playMusic.postValue(!(musicViewModel.playMusic.value)!!)
-        }
     }
 
     private suspend fun readPlay() {
@@ -93,6 +90,27 @@ class MainActivity : AppCompatActivity() {
             preferences[playKey] = play
             Log.e("play",preferences[playKey].toString())
         }
+    }
+
+    override fun onResume() {
+        lifecycleScope.launch {
+            readPlay()
+        }
+        super.onResume()
+    }
+
+    override fun onPause() {
+        MusicProvider.stopMedia()
+        super.onPause()
+    }
+
+    override fun onClick(p0: View?) {
+            when (p0) {
+                binding.btnPlay -> showActivity(Intent(this, QuizActivity::class.java))
+                binding.btnRanking -> showActivity(Intent(this, RankingActivity::class.java))
+                binding.btnAbout -> showActivity(Intent(this, AboutActivity::class.java))
+                binding.btnMusic -> musicViewModel.playMusic.postValue(!(musicViewModel.playMusic.value)!!)
+            }
     }
 
 }
