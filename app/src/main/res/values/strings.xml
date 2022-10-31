@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">House Of The Dargon Quiz</string>
+    <string name="play">Play</string>
+    <string name="ranking">Ranking</string>
+    <string name="exit">Exit</string>
+    <string name="check">Check</string>
+    <string name="next">Next</string>
+    <string name="quit_app">Quit Quiz</string>
+    <string name="question">Question</string>
+    <string name="quiz_result">Quiz Result</string>
+    <string name="your_score">Your Score</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="name">Name</string>
+    <string name="home">Home</string>
+    <string name="share">Share</string>
+    <string name="new_quiz">New Quiz</string>
+    <string name="of_the_house">of the house</string>
+    <string name="has_obtained">"has obtained "</string>
+    <string name="face_him">points, face him and get the iron throne</string>
+    <string name="already_saved">Saved Score</string>
+    <string name="version">version 0.1</string>
+    <string name="q1">Who is Prince Daemon\'s most trusted ally?</string>
+    <string name="q2">Who is the "Sea Snake"?</string>
+    <string name="q3">Who is the "Queen Who Never Was"?</string>
+    <string name="q4">Who is the "Ironrod"?</string>
+    <string name="q5">Who is the daughter of Ser Otto Hightower?</string>
+    <string name="q6">Who was the first king of Targaryen dynasty?</string>
+    <string name="q7">Who built Dragon pit?</string>
+    <string name="q8">Which Dragon did Aegon the Conquereor rode?</string>
+    <string name="q9">Who is known as the "Rogue Prince"?</string>
+    <string name="q10">What is the name of Rhaenyra Targaryen\'s Dragon?</string>
+    <string name="q11">Who did the King Viserys marry after the death of his first wife Aemma?</string>
+    <string name="q12">Who is Hand of the King at the beginning of House of the Dragon?</string>
+    <string name="q13">Who is the father of the firsts Rhaenyra\'s childs?</string>
+    <string name="q14">Who was pronounced heir to the Iron Throne at the Great Council of 102 AC?</string>
+    <string name="q15">"What house does Lord Corlys belong to? "</string>
+    <string name="q16">At the tourney to celebrate the birth of the King\'s new son, who unhorsed Daemon in the joust?</string>
+    <string name="q17">Who is the eldest son of Corlys Velaryon?</string>
+    <string name="q18">What are the names of the two Lannister twins?</string>
+    <string name="q19">During the final battle at the Stepstones, which dragon rider comes to Daemon\'s aid when he gets surrounded by enemy soldiers?</string>
+
+</resources>
