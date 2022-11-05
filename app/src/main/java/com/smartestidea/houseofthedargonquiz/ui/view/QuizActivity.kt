@@ -118,7 +118,7 @@ class QuizActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             when {
                 ++questionNumber<=10 -> {
-                    steps[questionNumber-1].setColorFilter(ContextCompat.getColor(this, if(isCorrect)R.color.teal else R.color.purple_500), PorterDuff.Mode.MULTIPLY)
+                    steps[questionNumber-2].setColorFilter(ContextCompat.getColor(this, if(isCorrect)R.color.teal else R.color.purple_500), PorterDuff.Mode.MULTIPLY)
                     steps[questionNumber-1].alpha = 1f
                     binding.tvQuestionNumber.text = if(questionNumber==10) "$questionNumber" else "0$questionNumber"
                     quizViewModel.nextQuestion()

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background = "@drawable/w3"
+    android:fitsSystemWindows="true"
     tools:context="ui.view.ScoreActivity">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -112,6 +113,18 @@
             android:weightSum="7" />
     </HorizontalScrollView>
 
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id = "@+id/btnReturnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/return_home"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"
+        app:tint="@color/white" />
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayoutCompat3"
         android:layout_width="match_parent"
@@ -147,17 +160,7 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id = "@+id/btnReturnHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:src="@drawable/return_home"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="10dp"
-        app:tint="@color/white" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
